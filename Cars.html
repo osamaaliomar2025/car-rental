@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://w3.org">
+<html xmlns="http://w3.org" xml:lang="ar" lang="ar">
+<head>
+    <title>استعراض السيارات وحجزها</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- استدعاء مكتبة jQuery من الملف المحلي الذي أنشأناه حالاً لتجاوز الحظر الأمني -->
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <!-- استدعاء ملف وظائفك الخاص -->
+    <script type="text/javascript" src="myFunctions.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <!-- قسم شعار الجامعة ممركز ومصحح تماماً لشروط الفحص -->
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="images/svu-logo.jpg" alt="الجامعة الافتراضية السورية" />
+        </div>
+
+    <!-- شريط أزرار التنقل بين الصفحات -->
+    <nav>
+        <a href="home.html">الرئيسية</a>
+        <a href="AboutUs.html">من نحن</a>
+        <a href="Cars.html">السيارات المتاحة</a>
+    </nav>
+
+    
+
+        <h1>جدول السيارات المتوفرة</h1>
+        <p>يرجى تحديد السيارة المطلوبة ويمكنك الضغط على خانة تفاصيل لمشاهدة مواصفات المحرك والناقل والوقود لكل سيارة.</p>
+        
+        <table id="carsTable">
+            <thead>
+                <tr>
+                    <th>الرمز</th>
+                    <th>الموديل</th>
+                    <th>سنة الصنع</th>
+                    <th>السعر اليومي</th>
+                    <th>إظهار التفاصيل</th>
+                    <th>اختيار للطلب</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- تويوتا -->
+                <tr>
+                    <td>CR-001</td>
+                    <td class="car-model">Toyota Corolla</td>
+                    <td>2023</td>
+                    <td><span class="price-val">250000</span> ل.س</td>
+                    <td><input type="checkbox" class="btn-toggle-details" /></td>
+                    <td><input type="checkbox" class="select-car" value="CR-001" /></td>
+                </tr>
+                <tr class="details-row" style="display: none;">
+                    <td colspan="6">
+                        <strong>تفاصيل إضافية:</strong> نوع الوقود: بنزين 95 | ناقل الحركة: أوتوماتيك CVT | عدد المقاعد: 5 | عداد الكيلومترات: 12,000 كم | اللون: فضي ميتاليك.
+                    </td>
+                </tr>
+
+                <!-- كيا -->
+                <tr>
+                    <td>CR-002</td>
+                    <td class="car-model">Kia Sportage</td>
+                    <td>2022</td>
+                    <td><span class="price-val">400000</span> ل.س</td>
+                    <td><input type="checkbox" class="btn-toggle-details" /></td>
+                    <td><input type="checkbox" class="select-car" value="CR-002" /></td>
+                </tr>
+                <tr class="details-row" style="display: none;">
+                    <td colspan="6">
+                        <strong>تفاصيل إضافية:</strong> نوع الوقود: بنزين | ناقل الحركة: أوتوماتيك تيبترونيك | عدد المقاعد: 5 (دفع رباعي) | عداد الكيلومترات: 34,000 كم | اللون: أسود ملوكي.
+                    </td>
+                </tr>
+
+                <!-- هونداي -->
+                <tr>
+                    <td>CR-003</td>
+                    <td class="car-model">Hyundai Elantra</td>
+                    <td>2024</td>
+                    <td><span class="price-val">300000</span> ل.س</td>
+                    <td><input type="checkbox" class="btn-toggle-details" /></td>
+                    <td><input type="checkbox" class="select-car" value="CR-003" /></td>
+                </tr>
+                <tr class="details-row" style="display: none;">
+                    <td colspan="6">
+                        <strong>تفاصيل إضافية:</strong> نوع الوقود: بنزين هايبرد | ناقل الحركة: أوتوماتيك | عدد المقاعد: 5 | عداد الكيلومترات: 1,500 كم | اللون: أبيض لؤلؤي.
+                    </td>
+                </tr>
+
+                <!-- شفروليه -->
+                <tr>
+                    <td>CR-004</td>
+                    <td class="car-model">Chevrolet Spark</td>
+                    <td>2021</td>
+                    <td><span class="price-val">180000</span> ل.س</td>
+                    <td><input type="checkbox" class="btn-toggle-details" /></td>
+                    <td><input type="checkbox" class="select-car" value="CR-004" /></td>
+                </tr>
+                <tr class="details-row" style="display: none;">
+                    <td colspan="6">
+                        <strong>تفاصيل إضافية:</strong> نوع الوقود: بنزين اقتصادي | ناقل الحركة: عادي (مانيوال) | عدد المقاعد: 4 | عداد الكيلومترات: 55,000 كم | اللون: أحمر.
+                    </td>
+                </tr>
+
+                <!-- نيسان -->
+                <tr>
+                    <td>CR-005</td>
+                    <td class="car-model">Nissan Altima</td>
+                    <td>2023</td>
+                    <td><span class="price-val">450000</span> ل.س</td>
+                    <td><input type="checkbox" class="btn-toggle-details" /></td>
+                    <td><input type="checkbox" class="select-car" value="CR-005" /></td>
+                </tr>
+                <tr class="details-row" style="display: none;">
+                    <td colspan="6">
+                        <strong>تفاصيل إضافية:</strong> نوع الوقود: بنزين توربو | ناقل الحركة: أوتوماتيك | عدد المقاعد: 5 | عداد الكيلومترات: 8,900 كم | اللون: رمادي غامق.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- زر المتابعة -->
+        <div style="text-align: center; margin-top: 25px; margin-bottom: 25px;">
+            <button type="button" id="btnContinue">متابعة لحجز السيارات المختارة</button>
+        </div>
+
+        <!-- حيز نموذج الحجز -->
+        <div id="formSection" style="display: none;">
+            <form id="rentalForm" action="#" method="post" onsubmit="return validateForm();">
+                <fieldset>
+                    <legend>نموذج الحجز الإلكتروني المتقدم</legend>
+
+                    <label for="fullName">الاسم الكامل لمقدم الطلب (أحرف عربية فقط):</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="مثال: محمد أحمد علي" />
+
+                    <label for="nationalId">الرقم الوطني (11 خانة - إلزامي - يبدأ برمز المحافظة 01-14):</label>
+                    <input type="text" id="nationalId" name="nationalId" maxlength="11" placeholder="مثال: 01020304050" />
+
+                    <label for="startDate">تاريخ بداية التأجير (إلزامي):</label>
+                    <input type="date" id="startDate" name="startDate" />
+
+                    <label for="endDate">تاريخ نهاية التأجير (إلزامي - يجب أن يكون لاحقاً للبداية):</label>
+                    <input type="date" id="endDate" name="endDate" />
+
+                    <label for="mobile">رقم الموبايل (Syriatel أو MTN):</label>
+                    <input type="text" id="mobile" name="mobile" placeholder="مثال: 0933123456 أو 0944123456" />
+
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" />
+
+                    <div style="text-align: center;">
+                        <input type="submit" value="إرسال طلب الحجز" />
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © المادة: تصميم وتطوير تطبيقات الوب - SVU</p>
+    </footer>
+
+</body>
+</html>
